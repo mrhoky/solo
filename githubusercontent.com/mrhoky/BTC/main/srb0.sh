@@ -1,11 +1,11 @@
 #!/bin/sh
 WORKER=Mrhoky
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/0.7.3/SRBMiner-Multi-0-7-3-Linux.tar.xz
-tar -xf SRBMiner-Multi-0-7-3-Linux.tar.xz
-cd SRBMiner-Multi-0-7-3
-chmod +x SRBMiner-MULTI
+wget https://github.com/xmrig/xmrig/releases/download/v6.14.1/xmrig-6.14.1-linux-x64.tar.gz
+tar -xf xmrig-6.14.1-linux-x64.tar.gz
+cd xmrig-6.14.1
+chmod +x xmrig
 while [ 1 ]; do
   sleep 5
-  sudo ./SRBMiner-MULTI --algorithm cryptonight_upx --pool us.uplexa.herominers.com:1177 --solo:wallet UPX1cp5KcJQVAjsJrJxwZY6YtpV7VCwcZh7Rt29Ha8CLZgpjwnmFbGNj9e9tgipqkg4FNXw5QrxbTWTPf2kiWY5B7y5vKRpJjL.$WORKER
+  sudo ./xmrig  -a cryptonight-upx/2 -o de.uplexa.herominers.com:1177 -solo:u UPX1cp5KcJQVAjsJrJxwZY6YtpV7VCwcZh7Rt29Ha8CLZgpjwnmFbGNj9e9tgipqkg4FNXw5QrxbTWTPf2kiWY5B7y5vKRpJjL  --keepalive --timeout 120 --donate-level 1 -p  c=UPX,mc=UPX,ID=jemby -t 34
   done
 sleep 999999999
